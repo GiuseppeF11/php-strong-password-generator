@@ -1,5 +1,11 @@
 <?php
 session_start();
+include './functions.php';
+if (isset($_POST['password'])) {
+    $temp = getPass($_POST["password"]);
+    $_SESSION['password'] = $temp;
+    header('Location: password.php');
+}
 ?>
 
 
@@ -25,7 +31,7 @@ session_start();
         <h1>Password Generator</h1>
         <div class="container py-4">
             <div class="row g-3 align-items-center justify-content-center">
-                <form action="modifica_post.php" method="POST">
+                <form action="" method="POST">
                     <div class="col-auto ">
                         <label for="number" class="col-form-label">Inserisci la lunghezza della password</label>
                     </div>
