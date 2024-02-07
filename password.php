@@ -1,8 +1,8 @@
 <?php
+
 session_start();
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,17 +25,14 @@ session_start();
         <h1>Password Generator</h1>
         <div class="container py-4">
             <div class="row g-3 align-items-center justify-content-center">
-                <form action="modifica_post.php" method="POST">
-                    <div class="col-auto ">
-                        <label for="number" class="col-form-label">Inserisci la lunghezza della password</label>
-                    </div>
-                    <div class="col-1 m-auto">
-                        <input type="number" id="password" name="password" class="form-control" aria-describedby="passwordHelpInline">
-                        <?php ?>
-                    </div>
-                    <button class="btn btn-light my-3">Genera Password</button>
-                </form>
+                <h3>
+                    La tua password è:
+                </h3>
+                <h4>
+                    <?php echo $_SESSION['password']; ?>
+                </h4>
             </div>
+            <a href="./index.php" class="text-light">Torna alla home</a>
         </div>
     </div>
 

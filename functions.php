@@ -1,7 +1,4 @@
 <?php 
-    var_dump($_GET["password"]);
-
-    $n= $_GET["password"];
     
     function getPass($n) {
         $simboliammessi = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"$%&/()=?^>*_-';
@@ -14,7 +11,4 @@
     
         return $passwordCasuale;
     }
- 
-    
-    var_dump(strlen(getPass($n)));
 ?>
