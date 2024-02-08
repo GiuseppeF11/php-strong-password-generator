@@ -2,6 +2,7 @@
 
 session_start();
 
+$password = $_SESSION['password'];
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ session_start();
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container text-center py-5">
         <h1>Password Generator</h1>
         <div class="container py-4">
             <div class="row g-3 align-items-center justify-content-center">
@@ -29,7 +30,7 @@ session_start();
                     La tua password è:
                 </h3>
                 <h4>
-                    <?php echo $_SESSION['password']; ?>
+                    <?php echo $password; ?>
                 </h4>
             </div>
             <a href="./index.php" class="text-light">Torna alla home</a>
